@@ -18,3 +18,8 @@ fake.data %>%
   ggplot(aes(x = x, y = y)) +
   geom_point() +
   ggtitle('Fake data', subtitle = 'These points don\'t mean anything')
+
+fake.data %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_bin2d(bins = 2) +
+  ggtitle('Fake data', subtitle = 'These points don\'t mean anything')
