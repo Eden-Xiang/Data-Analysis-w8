@@ -12,3 +12,9 @@ cor.test(~ x + y, method = 'pearson', data = fake.data)
 library(dplyr)
 fake.data %>%
   cor.test(~ x + y, method = 'pearson', data = .)
+
+library(ggplot2)
+fake.data %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  ggtitle('Fake data', subtitle = 'These points don\'t mean anything')
